@@ -26,6 +26,7 @@ public class JAXBHelper {
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+            marshaller.setProperty(Marshaller.JAXB_FRAGMENT,false);
             marshaller.marshal(o, os);
         } catch(JAXBException e) {
             throw e;
